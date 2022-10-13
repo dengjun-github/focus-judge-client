@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gioneco.focus.judge.client.controller.MainController">
+   <children>
+      <VBox layoutX="393.0" layoutY="358.0" prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="packageImageAp" prefHeight="979.0" prefWidth="1920.0">
+               <children>
+                  <VBox fx:id="leftVbox" layoutX="117.0" layoutY="190.0" prefHeight="979.0" prefWidth="92.0" style="-fx-background-color: #F8F8FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1828.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="768.0" prefWidth="54.0" text="主视角" textAlignment="RIGHT" wrapText="true">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="572.0" prefWidth="54.0" text="侧视角" textAlignment="RIGHT" wrapText="true">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Separator layoutY="587.0" prefHeight="3.0" prefWidth="1920.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="587.0" />
+               </children></AnchorPane>
+            <AnchorPane prefHeight="98.0" prefWidth="1920.0">
+               <children>
+                  <Button layoutX="1515.0" layoutY="29.0" mnemonicParsing="false" onAction="#passAction" prefHeight="41.0" prefWidth="106.0" style="-fx-background-color: #3c72f5;" text="放行【空格】" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button layoutX="1760.0" layoutY="29.0" mnemonicParsing="false" onAction="#unpackAction" prefHeight="41.0" prefWidth="114.0" style="-fx-background-color: #fd8f14;" text="开包【enter】" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Label layoutX="400.0" layoutY="43.0" text="总数">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalCountLabel" alignment="CENTER" contentDisplay="CENTER" depthTest="ENABLE" layoutX="450.0" layoutY="39.0" style="-fx-background-color: #dee2fb; -fx-border-color: #c0c7f8;" text="0" textFill="#566bfe">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="3.0" left="10.0" right="10.0" top="3.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="611.0" layoutY="42.0" text="放行">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="passCountLabel" alignment="CENTER" contentDisplay="CENTER" depthTest="ENABLE" layoutX="655.0" layoutY="39.0" style="-fx-background-color: #d9f3e1; -fx-border-color: #7fd08d;" text="0" textFill="#0fa628">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="3.0" left="10.0" right="10.0" top="3.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="800.0" layoutY="42.0" text="开包">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="unpackCountLabel" alignment="CENTER" contentDisplay="CENTER" depthTest="ENABLE" layoutX="844.0" layoutY="39.0" style="-fx-background-color: #ffe6e1; -fx-border-color: #ffd9d1;" text="0" textFill="#ff7355">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="3.0" left="10.0" right="10.0" top="3.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER" layoutX="165.0" layoutY="24.0" prefHeight="62.0" prefWidth="184.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="usernameLabel" text="用户">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="54.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="hourLabel" text="00">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="10.0" text=":">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="minuteLabel" layoutX="32.0" layoutY="10.0" text="00">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="54.0" layoutY="10.0" text=":">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="secondLabel" layoutX="76.0" layoutY="10.0" text="00">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <VBox alignment="CENTER" layoutX="35.0" layoutY="9.0" prefHeight="81.0" prefWidth="92.0" spacing="10.0">
+                     <children>
+                        <ImageView fx:id="suspendImage" fitHeight="35.0" fitWidth="50.0" onMouseClicked="#suspend" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="suspendLabel" text="开始[esc]">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
